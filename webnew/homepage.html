@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<head></head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyPortfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+  <style>
+  body {
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: white;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    border-radius: 20px;
+    border-bottom: #195998;
+  }
+  
+.sticky {
+  top: -100px; /* Change this value as needed to control the sliding distance */
+}
+
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin: 10px;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 5px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: "Helvetica Neue", sans-serif;
+  }
+  
+  nav ul li a:hover {
+    color: lightskyblue;
+    border-radius: 5px;
+  }
+  
+  /* Dropdown Styles */
+  nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    border-radius: 0 0 5px 5px;
+  }
+  
+  nav ul li:hover ul {
+    display: block;
+  }
+  
+  nav ul li ul li {
+    display: block;
+  }
+  
+  nav ul li ul li a {
+    color: #f4f4f4;
+    padding: 10px 15px;
+  }
+  
+  /* Content Section Styles */
+  
+  #portfolio {
+    height: 600px;
+    width: 100%;
+    background-color:white;
+    background-size: cover;
+    border-radius: 5px;
+  }
+  
+  .portfolio-item {
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+  #portfolio h2{
+    float: right;
+    margin-top: 10px;
+    color:#195998;
+  }
+  
+  #contact {
+    background-color: white;
+    color: black;
+    padding: 50px 0;
+    text-align: center;
+    height: 400px;
+    width: 100%;
+  }
+  
+  .contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: black;
+  }
+  
+  .social-icons {
+    font-size: 24px;
+    margin-top: 20px;
+    color: yellow;
+  }
+  
+  .social-icons a {
+    color: palevioletred;
+    margin: 10px 10px;
+    transition: color 0.3s;
+    filter: brightness(100%);
+  }
+  
+  #about {
+    display: flex;
+    width: 100%;
+}
+
+.about-left {
+    width: 50%;
+    background-color: #12202d;
+    border-style:double;
+}
+.about-left h4{
+  color: #f4f4f4;
+  
+}
+.about-left h2 u{
+  color: #f4f4f4;
+  
+}
+.about-right {
+    width: 50%;
+    background-color: #195998;
+    color: white;
+    border-style:double;
+}
+
+.about-content {
+    display: flex;
+}
+
+.about-image img {
+    max-width: 200px;
+    margin: 20px;
+}
+
+.about-text {
+    padding: 20px;
+}
+
+.about-text h3 {
+    color: white;
+}
+
+.about-text p {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.about-text ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-text ul li {
+    margin: 5px 0;
+}
+
+  /* Home Section Styles */
+  #home {
+    text-align: center;
+    background-image: url('city.jpg');
+    padding: 50px;
+    color: white;
+    height: 600px;
+    background-repeat: no-repeat;
+    font-size: x-large;
+    border-radius: 2px;
+  }
+  
+  #home h2 {
+    color:#195998;
+    font-size: xx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    float: left;
+  }
+  #home h5 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    float: left;
+    margin-top: 30px;
+  }
+  #home p {
+    color:white;
+    font-size: 35px;
+    margin-bottom: 20%;
+    text-align: absolute;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 20%;
+   
+  }
+  .sliding-background {
+    background-image: url('city.jpg');
+    background-size: cover;
+    color: white;
+    height: 600px;
+    background-repeat: no-repeat;
+    font-size: x-large;
+    border-radius: 2px;
+    animation: slide 1000s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        background-image: url('city.jpg');
+    }
+    25% {
+        background-image: url('highway.png');
+    }
+    50% {
+        background-image: url('workhard.png');
+    }
+    75% {
+      background-image: url('sky.png');
+  }
+    100% {
+        background-image: url('city.jpg');
+    }
+}
+
+  
+  /* Resume Section Styles */
+  #resume {
+    height: 600px;
+    background-color: #12202d;
+    border-radius: 5px;
+  }
+  
+  #resume h2 {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 30px;
+  }
+  #resume h3 u{
+    color :#f4f4f4;
+  }
+  
+  #resume p {
+    color: white;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #195998;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 5px 0;
+    bottom: 0;
+    width: 100%;
+    border-radius: 5px;
+  }
+  footer {
+    background-color: #195998;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 5px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 10px 0;
+}
+
+.social-icons {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: palevioletred;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+/* Media query for responsiveness */
+@media only screen and (max-width: 768px) {
+    .social-icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .social-icons a {
+        margin: 5px;
+    }
+}
+
+
+  </style>
+  <body>
+    <header>
+      <nav><b>
+        <ul>
+          <li><a href="#home"><u>Home.</u></a></li>
+          <li><a href="#about"><u>About.</u></a></li>
+          <li><a href="#portfolio"><u>Portfolio.</u></a></li>
+          <li><a href="#resume"><u>Resume.</u></a></li>
+          <li><a href="#contact"><u>Contact.</u></a></li>
+        </ul>
+        </nav>
+    </header>
+    <section id="home" class="sliding-background">
+      <h5>Welcome</h5>
+      <h2><u>HOME.</u></h2>
+      <p><b>HELLO!!</b> ,I am <b>Finney Abuko</b> Welcome to my world. I love programming, web development, and graphic design.</p>
+      <div class="social-icons">
+          <a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook"></a>
+          <a href="https://www.twitter.com/" target="_blank" class="fa fa-twitter"></a>
+          <a href="https://www.instagram.com/" target="_blank" class="fa fa-instagram"></a>
+          <a href="https://www.linkedin.com/" target="_blank" class="fa fa-linkedin"></a>
+          <a href="https://www.email.com/" target="_blank" class="fa fa-email"></a>
+      </div>
+  </section>
+  
+
+  <section id="about">
+    
+    <div class="about-content">
+        <div class="about-left">
+          <h4>Discover</h4>
+          <h2><u>ABOUT ME.</u></h2> 
+            <div class="about-image">
+                <img src="profile_picture.jpg" alt="Profile Picture">
+            </div>
+        </div>
+        <div class="about-right">
+            <div class="about-text">
+                <h3>Who Am I?</h3>
+                <p>
+                    I'm a passionate web developer with a strong background in front-end
+                    and back-end technologies. I love creating beautiful and functional
+                    websites that make a difference. In my free time, I enjoy hiking,
+                    photography, and exploring new technologies.
+                </p>
+                <h3>My Skills</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                </ul>
+                <h3>My Interests</h3>
+                <p>
+                    Apart from coding, I have a keen interest in digital marketing, UI/UX design, and
+                    entrepreneurship. I believe in the power of technology to transform businesses
+                    and improve people's lives.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section id="portfolio">
+      <h2><u>PORTFOLIO.</u></h2>
+      <div class="portfolio-item">
+
+      </div>
+    </section>
+
+    <section id="resume">
+      <h2><U>RESUME.</U></h2>
+      <h3><u>My   Resume</u></h3>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+
+      <div class="contact-content">
+        <p>Feel free to reach out to me on social media:</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook"></a>
+            <a href="https://www.twitter.com/" target="_blank" class="fa fa-twitter"></a>
+            <a href="https://www.instagram.com/" target="_blank" class="fa fa-instagram"></a>
+            <a href="https://www.linkedin.com/" target="_blank" class="fa fa-linkedin"></a>
+        </div>
+    </div>
+   
+    </section>
+    <footer>
+      <div class="footer-content">
+          <p>&copy; 2023FinneyAbuko. All rights reserved.</p>
+          <div class="social-icons">
+              <a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook"></a>
+              <a href="https://www.twitter.com/" target="_blank" class="fa fa-twitter"></a>
+              <a href="https://www.instagram.com/" target="_blank" class="fa fa-instagram"></a>
+              <a href="https://www.linkedin.com/" target="_blank" class="fa fa-linkedin"></a>
+              <a href="https://www.email.com/" target="_blank" class="fa fa-email"></a>
+
+          </div>
+      </div>
+  </footer>
+  </body>
+</html>
